@@ -3,10 +3,10 @@ import 'package:flutter_masked_text/flutter_masked_text.dart';
 class ImcBloc {
   var heightCtrl = new MaskedTextController(mask: '000');
   var weightCtrl = new MaskedTextController(mask: '000');
-  var result = "Preencha od dados para calcular seu IMC";
+  var result = "Preencha os dados para calcular seu IMC";
 
   calculate() {
-    double height = double.parse(heightCtrl.text);
+    double height = double.parse(heightCtrl.text) / 100;
     double weight = double.parse(weightCtrl.text);
     double imc = weight / (height * height);
 
